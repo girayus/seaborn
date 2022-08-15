@@ -1302,13 +1302,13 @@ class _ViolinPlotter(_CategoricalPlotter):
                     linewidth=self.linewidth,
                     color=self.gray)
             ax.plot([center, center], [q25, q75],
-                    linewidth=self.linewidth * 10,
+                    linewidth=self.linewidth * 3,
                     color=self.gray)
             ax.scatter(center, q50,
                        zorder=3,
                        color="white",
                        edgecolor=self.gray,
-                       s=np.square(self.linewidth * 9))
+                       s=np.square(self.linewidth * 8))
         else:
             ax.plot([h1, h2], [center, center],
                     linewidth=self.linewidth,
@@ -1320,7 +1320,7 @@ class _ViolinPlotter(_CategoricalPlotter):
                        zorder=3,
                        color="white",
                        edgecolor=self.gray,
-                       s=np.square(self.linewidth * 2))
+                       s=np.square(self.linewidth * 8))
 
     def draw_quartiles(self, ax, data, support, density, center, split=False):
         """Draw the quartiles as lines at width of density."""
